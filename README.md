@@ -1,5 +1,11 @@
 # mysql and phpmyadmin docker containers
-#### create and start containers
-`docker-compose up -d`
-#### stop and remove containers and network
-`docker-composer down`
+#### create containers
+`docker-compose up --no-start`
+### start containers
+`docker-compose start`
+### restart containers
+`docker-compose restart`
+### stop containers
+`docker-compose stop`
+#### remove containers
+`docker-composer rm`

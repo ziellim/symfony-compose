@@ -1,8 +1,5 @@
 version: "3"
 
-networks:
-  host:
-
 services:
   mysql:
     container_name: mysql
@@ -11,12 +8,10 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-    networks:
-      - host
   phpmyadmin:
     container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin
     ports:
       - '8089:80'
-    networks:
-      - host
+    links:
+      - mysql:db
